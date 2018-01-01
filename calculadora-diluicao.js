@@ -17,8 +17,7 @@ function mostrarSobreCalculo(){
 }
 
 
-
-botaoCalcular.addEventListener("click", () => {
+botaoCalcular.addEventListener("click", function(){
 
 	if ((input_MlOleoVegetal.value != "") && (input_PorctOleoEssencial.value != "")) {
 
@@ -35,9 +34,12 @@ botaoCalcular.addEventListener("click", () => {
 
 			numeroGotaInterno.innerHTML = qtdGotasArredondada;
 
-			resultadoFinal.innerHTML = `Para uma concentração de <b>${porctOleoEssencial}%</b> <br>
-			em <b>${mlOleoVegetal}ml</b> de óleo vegetal, <br> você deve diluir <b>${qtdGotas} gota(s)</b> <i>(valor sem arredondamento)</i> do óleo essencial 
-			em seu frasco!`
+			resultadoFinal.innerHTML = "Para uma concentração de <b>" 
+			+ porctOleoEssencial 
+			+ "%</b><br> em <b>" 
+			+ mlOleoVegetal 
+			+ " ml</b> de óleo vegetal, <br> você deve diluir <b>" 
+			+ qtdGotas + " gota(s)</b> <i>(valor sem arredondamento)</i> do óleo essencial em seu frasco!"
 
 			
 		

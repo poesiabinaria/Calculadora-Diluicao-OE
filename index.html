@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+<head>
+	<meta charset = "utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" href = "style.css">
+	<link href="https://fonts.googleapis.com/css?family=Sarala:400,700" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+	<title>Calculadora para Diluição de Óleos Essenciais</title>
+</head>
+
+
+<body>
+	
+	<div id="conteudo-principal">
+		<div class="flor">
+	</div>
+
+		<div class="cabecalho">
+			<div class="barra-escura"></div>
+			<div class="conteudo-cabecalho">
+				<div class="logo">
+					<img src="img/logo-oil.png">
+				</div>
+				<h1>Calculadora para<br>Diluição de Óleos Essenciais</h1>
+			</div>
+		</div>
+
+		<div class="box-central">
+			<div class="perguntas">
+				<p>Qual a quantidade de óleo vegetal que será utilizada?</p> 
+				<input id="ml-oleo-vegetal-usuario" placeholder="Exemplo: 15" autofocus="true"> ml
+				<p>E qual a porcentagem de diluição desejada do óleo essencial?</p>
+				<input id="porct-oleo-essencial-usuario" placeholder="Exemplo: 3"> %
+				<div class="box-botoes">
+					<button id="botao-calcular" type="button"> Calcular! </button> <br>
+					<button class="botao-pequeno" type="button" onclick="mostrarSobreCalculo()"> Como é feito <br> o cálculo? </button>
+				</div>
+			</div>
+
+			<div class="resultado">
+				<div class="gota">
+					<img src="img/gota.png">
+					<div class="conteudo-gota">
+						<p id="numero-gota-interno"></p>
+						<p id="subtitulo-gota">gota(s)</p>
+					</div>
+				</div>
+				<p id="resultado-final"></p>
+				<button class="botao-pequeno" type="button" onclick="novoCalculo()"> Novo Cálculo </button>
+			</div>
+
+			<div class="sobre-calculo">
+				<p>O cálculo da quantidade de gotas do óleo essencial pode ser feito em dois passos: <br><br>
+				1) Calcula-se a quantidade (em ml) do óleo essencial equivalente à porcentagem desejada e de acordo com a quantidade (em ml) do óleo vegetal; <br><br> 2) Calcula-se o número de gotas do óleo essencial equivalente à quantidade de ml calculada anteriormente. <br><br> Se você fizer uma expressão para cada passo acima, é possível chegar a uma só fórmula: <br><br>
+				Número de Gotas = (Qtd do óleo vegetal em ml * Porcentagem desejada do óleo essencial em % * 0,25). <br><br> Tudo bem simples! Os dois passos foram tirados de uma postagem do blog Harmonie Terapia, <a href="http://harmoniearomaterapia.com.br/blog/diluicao-de-oleos-essenciais/" target="_blank">veja aqui!<a> <br><br>
+				Detalhe: a calculadora arredonda a quantidade de gotas para mais ou para menos. Por exemplo, se o valor final de gotas for 2.4, esse valor é arrendondado para 2. Caso o valor final seja 2.5 ou 2.7, o arredondamento será para 3. Mas, também, o valor original (sem arredondamentos) é mostrado na descrição detalhada do cálculo! :)<br><br>
+			</p>
+			<button class="botao-pequeno" type="button" onclick="novoCalculo()"> Voltar </button>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+
+<footer>
+    <p> Feito com ❤ por <a href="https://www.facebook.com/gabriel.mendes.web" target="_blank"> Gabriel </p>
+ </footer>
+
+<script type="text/javascript" src="calculadora-diluicao.js"></script>
+
+</html>

@@ -141,4 +141,5 @@ a{ color: white; }
 footer p {
 	font-size: 10px;
 	text-align: right;
+	margin-right: 20px;
 }

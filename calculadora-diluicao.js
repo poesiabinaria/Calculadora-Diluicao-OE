@@ -8,8 +8,8 @@ var resultadoFinal = document.getElementById("resultado-final");
 var input_MlOleoVegetal = document.getElementById("ml-oleo-vegetal-usuario");
 var input_PorctOleoEssencial = document.getElementById("porct-oleo-essencial-usuario");
 
-function validarInput(input){ return isNaN(Number(input.value)) ? false : true; }
-function formatarNumero(input){ return input.value.toString().replace(",", ".") }
+function formatarNumero(input){ return input.value.replace(",", ".") }
+function ehNumero(input){ return isNaN(Number(formatarNumero(input))) ? false : true; }
 function novoCalculo(){ location.reload() }
 function mostrarSobreCalculo(){
 	perguntas[0].style.display = "none";
@@ -21,7 +21,7 @@ botaoCalcular.addEventListener("click", function(){
 
 	if ((input_MlOleoVegetal.value != "") && (input_PorctOleoEssencial.value != "")) {
 
-		if ((validarInput(input_MlOleoVegetal) == true) && (validarInput(input_PorctOleoEssencial) == true)) {
+		if ((ehNumero(input_MlOleoVegetal) == true) && (ehNumero(input_PorctOleoEssencial)) == true) {
 			
 			var mlOleoVegetal = formatarNumero(input_MlOleoVegetal);
 			var porctOleoEssencial = formatarNumero(input_PorctOleoEssencial);
@@ -38,7 +38,7 @@ botaoCalcular.addEventListener("click", function(){
 			+ porctOleoEssencial 
 			+ "%</b><br> em <b>" 
 			+ mlOleoVegetal 
-			+ " ml</b> de óleo vegetal, <br> você deve diluir <b>" 
+			+ "ml</b> de óleo vegetal, <br> você deve diluir <b>" 
 			+ qtdGotas + " gota(s)</b> <i>(valor sem arredondamento)</i> do óleo essencial em seu frasco!"
 
 			

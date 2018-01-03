@@ -39,7 +39,7 @@ botaoCalcular.addEventListener("click", function(){
 			+ "%</b><br> em <b>" 
 			+ mlOleoVegetal 
 			+ "ml</b> de óleo vegetal, <br> você deve diluir <b>" 
-			+ qtdGotas + " gota(s)</b> <i>(valor sem arredondamento)</i> do óleo essencial em seu frasco!"
+			+ qtdGotas + " gota(s)</b> <i>(valor não arredondado)</i> do óleo essencial em seu frasco!"
 
 			
 		
